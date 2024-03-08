@@ -63,6 +63,14 @@ MonoBehaviour:
       _paramID: -1605138850
       _condition: 5
       value: 0
+  - _dest: {fileID: 1995836896466605390}
+    _mute: 0
+    _exitTime: 0
+    _conditions:
+    - _paramName: Land
+      _paramID: 137525990
+      _condition: 5
+      value: 0
 --- !u!114 &-5087042120234441889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,10 +155,6 @@ MonoBehaviour:
       _name: Ground
       _paramID: -1605138850
       value: 0
-    - _paramType: 2
-      _name: Wall
-      _paramID: -1278787384
-      value: 0
     - _paramType: 1
       _name: Angle
       _paramID: -1052743155
@@ -158,6 +162,10 @@ MonoBehaviour:
     - _paramType: 0
       _name: Direction
       _paramID: -1128574192
+      value: 0
+    - _paramType: 2
+      _name: Land
+      _paramID: 137525990
       value: 0
 --- !u!114 &1431426477727701241
 MonoBehaviour:
@@ -185,7 +193,7 @@ MonoBehaviour:
       _condition: 6
       value: 0
   maxChargeTime: 1.5
-  jumpPower: 13
+  jumpPower: 15
 --- !u!114 &1995836896466605390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actionName: Idle
   _actionID: 2081823275
-  _position: {x: 0, y: 122.00001}
+  _position: {x: 0, y: 121.99999}
   _guid: c18d9f56ad112d540aca64081387e32e
   _transitions:
   - _dest: {fileID: -8141071764950106781}

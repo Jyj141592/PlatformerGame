@@ -36,12 +36,12 @@ public class PlayerInput : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         var p = other.GetContact(0).point;
         Vector2 v = new Vector2(p.x - transform.position.x, p.y - transform.position.y);
-        v.Normalize();
+        //v.Normalize();
 
-        if(v.y < 0 && -v.y > 0.8f){
+        if(v.y < -0.37f){
             con.SetBool("Ground", true);
         }
-        else if(v.y > 0 && v.y > 0.7071f) return;
+        //else if(v.y > 0 && v.y > 0.7071f) return;
         else {
             con.SetBool("Wall", true);
         }

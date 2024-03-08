@@ -12,6 +12,7 @@ public class Jump : PCNode
     private BoxCollider2D bCol;
     private CircleCollider2D cCol;
     private int speedHash;
+    private float zeroTime = 0;
 
 
     public override void Init(GameObject obj)
@@ -34,6 +35,14 @@ public class Jump : PCNode
     {
         float speed = rigid.velocity.sqrMagnitude;
         animator.SetFloat(speedHash, speed);
+        if(rigid.velocity.y == 0){
+            zeroTime += Time.deltaTime;
+            if(zeroTime > 0.2f){
+                con.SetBool("Land", true);
+                animator.SetTrigger("Land");
+            }
+        }
+        else zeroTime = 0;
         int direction;
         if(rigid.velocity.x > 0) direction = 1;
         else direction = -1;

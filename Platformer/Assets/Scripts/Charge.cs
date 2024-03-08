@@ -42,6 +42,7 @@ public class Charge : PCNode
         if(t > maxChargeTime) t = maxChargeTime;
         float angle = (Mathf.PI * t) / (2 * maxChargeTime);
         con.SetFloat(angleIdx, angle);
+        con.SetBool("Land", false);
         animator.SetBool(chargeHash, false);
         int direction = con.GetInt("Direction");
         rigid.velocity = new Vector2(jumpPower * Mathf.Cos(angle) * direction, jumpPower * Mathf.Sin(angle));
